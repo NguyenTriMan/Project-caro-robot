@@ -10,9 +10,9 @@ int value = 0;
 
 void moveaxialx(int distancex)
 { 
-  for (y =0; y<distancex; y++) //distance = 8 cuoi o
+  for (y =0; y<distancex; y++) //distance = 8 
   {
-    for (x=0 ; x<10000; x++)  // 10000xung truc x di 2cm-0.7s
+    for (x=0 ; x<10000; x++)  // 10000pulse axis x move 2cm-0.7s
     {
       digitalWrite(stepPinx,HIGH); 
       delayMicroseconds(35); 
@@ -23,9 +23,9 @@ void moveaxialx(int distancex)
 }
 void moveaxialy(int distancey)
 {
-  for (y=0 ; y< distancey; y++) // distance = 7 di cuoi o
+  for (y=0 ; y< distancey; y++) // distance = 7 
   {
-    for (x=0;x<10000;x++)           //10000xung truc y di 1cm-0.5s
+    for (x=0;x<10000;x++)           //10000pulse axis y move 1cm-0.5s
     {
       digitalWrite(stepPiny,HIGH); 
       delayMicroseconds(25); 
@@ -63,12 +63,12 @@ if(Serial.available() > 0)
         // high di lui low tien toi
           if (value == '3') // x3 on position 2
           {
-            digitalWrite(dirPinx,LOW); // truc x tien toi
+            digitalWrite(dirPinx,LOW); // axial x go forward
             moveaxialx(2);
             digitalWrite(dirPiny,HIGH);
             moveaxialy(6);
             penupdw(); 
-            digitalWrite(dirPinx,HIGH); // aixal x go backward 
+            digitalWrite(dirPinx,HIGH); // axial x go backward 
             moveaxialx(2);
             digitalWrite(dirPiny,LOW);
             moveaxialy(6);
