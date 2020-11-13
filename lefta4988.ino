@@ -23,7 +23,7 @@ void moveaxialx(int distancex)
 }
 void moveaxialy(int distancey)
 {
-  for (y=0 ; y< distancey; y++) // distance = 7 
+  for (y=0 ; y< distancey; y++) // distance = 6
   {
     for (x=0;x<10000;x++)           //10000pulse axis y move 1cm-0.5s
     {
@@ -74,7 +74,7 @@ if(Serial.available() > 0)
             moveaxialy(6);
             value = 0;
           }
-          if (value == '1')
+          else if (value == '1')
           {
             digitalWrite(dirPinx,LOW);//axial x go forward
             moveaxialx(8);
@@ -87,7 +87,7 @@ if(Serial.available() > 0)
             moveaxialy(6);
             value =0;
           }
-          if (value == '4')
+          else if (value == '4')
           {
             digitalWrite(dirPinx,LOW);//axial x go forward
             moveaxialx(5);
@@ -100,7 +100,7 @@ if(Serial.available() > 0)
             moveaxialy(6);
             value =0;
           }
-          if (value == '6')
+          else if (value == '6')
           {
             digitalWrite(dirPinx,LOW);//axial x go forward
             moveaxialx(5);
@@ -113,7 +113,7 @@ if(Serial.available() > 0)
             moveaxialy(6);
             value =0;
           }
-          if (value == '7')
+          else if (value == '7')
           {
             digitalWrite(dirPinx,LOW);//axial x go forward
             moveaxialx(2);
@@ -126,7 +126,7 @@ if(Serial.available() > 0)
             moveaxialy(6);
             value =0;
           }
-          if (value == '9')
+          else if (value == '9')
           {
             digitalWrite(dirPinx,LOW);//axial x go forward
             moveaxialx(2);
@@ -139,7 +139,7 @@ if(Serial.available() > 0)
             moveaxialy(6);
             value =0;
           }
-          if (value == '2')
+          else if (value == '2')
           {
             digitalWrite(dirPinx,LOW);//axial x go forward
             moveaxialx(8);         
@@ -148,7 +148,7 @@ if(Serial.available() > 0)
             moveaxialx(8);
             value =0;
           }
-          if (value == '5')
+          else if (value == '5')
           {
             digitalWrite(dirPinx,LOW);//axial x go forward
             moveaxialx(5);         
@@ -157,7 +157,7 @@ if(Serial.available() > 0)
             moveaxialx(5);
             value =0;
           }
-          if (value == '8')
+          else if (value == '8')
           {
             digitalWrite(dirPinx,LOW);//axial x go forward
             moveaxialx(2);         
